@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "92c6836d-6494-4bb9-92c2-6523a20a9f42",
+		"name": "WireMock no code",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Provisioning HealthCheck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   { \"mappings\": [{\n        \"request\": {\n            \"method\": \"GET\",\n            \"url\": \"/health\"\n        },\n        \"response\": {\n            \"status\": 200,\n            \"jsonBody\": {\n                \"status\": \"OK\",\n                \"server\": \"Dummy WireMock\"\n            }\n        }\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8080/__admin/mappings/import",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"__admin",
+						"mappings",
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HealthCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8080/health",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
