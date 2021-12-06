@@ -11,10 +11,11 @@
     
 ## Stack info
 - Docker 20.10.8
+- Postman
 
 ## Summary
 
-It is a very very simple repository to show the power of (WireMock)[http://wiremock.org/] functionality. 
+It is a very very simple repository to show the power of [WireMock](http://wiremock.org/) functionality. 
 We just start a service through docker with a docker compose, provision the server with a request and test its operation.
 
 ## How to work
